@@ -1,1 +1,1 @@
-chatalma.netlify.app
+https://chatalma.netlify.app
