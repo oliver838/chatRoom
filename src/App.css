@@ -1,0 +1,361 @@
+/* General Styles */
+
+*{
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #252525;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #8a8a8a;
+    padding-top: 20px;
+    font-size: 2rem;
+}
+
+/* User Info Section */
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-info span {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #8a8a8a;
+}
+
+.user-info button {
+    background-color: #ff5c8d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.user-info button:hover {
+    background-color: #ff4171;
+}
+
+/* Chatbox Styles */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+  box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    width: calc(100% - 15px);
+margin-left: 15px;
+
+}
+
+.message.own {
+    flex-direction: row-reverse;
+    
+}
+
+.message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    
+}
+
+.message.own img {
+    margin-left: 10px;
+}
+
+.message div {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 0px;
+   word-wrap: break-word; /* Az egész szöveget törni fogja, ha szükséges */
+    overflow-wrap: break-word;
+    word-break: break-all; 
+
+}
+.message.own div {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 0px;
+}
+.message p {
+    margin: 0;
+    color: #8a8a8a;
+    font-size: 14px;
+}
+
+.message strong {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input Box */
+form {
+    display: flex;
+    position:sticky ;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+
+    background-color: #fff;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 2px 1px rgb(77, 102, 110);
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+form input:focus{
+    border: none;
+}
+input:hover,
+input:focus,
+input:active {
+  border: none;
+  outline: none;
+     box-shadow: 0 0 4px 1px rgb(19, 93, 117);
+
+}
+
+/* Ha esetleg ::after vagy ::before használva van valahol */
+input::after,
+input::before {
+  content: none;
+  border: none;
+
+}
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/**/
+/* Hamburger ikon kívül (bal felső sarok) */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #252525;
+  box-shadow:  0 0 5px 2px #7c7c7c;
+  border-radius: 5px;
+  z-index: 1000;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: margin 0.3s ease;
+  color: #525252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+}
+
+/* Kívül – bal felső */
+.outside-menu {
+  top: 10px;
+  left: 10px;
+}
+
+/* Belül – jobb felső a menüben */
+.inside-menu {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+}
+
+/* Menü alap */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #474747;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+}
+
+/* Menü header (a bezáró gombnak) */
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Bezáró gomb */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #adadad;
+  box-shadow: 0 0 3px 1px rgb(170, 170, 170);
+    background-color: rgb(55, 62, 73);
+}
+
+/* User info a menüben */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-info span {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.user-info button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #ff5c8d;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.menu-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-content img{
+    border-radius: 50%;
+  margin-bottom: 10px;
+}
+.logOut{
+    position: absolute !important;
+   bottom: 10px !important;
+   right: 10px !important;
+    
+    
+}
+html{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body,#root{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.app{
+  display: flex;
+  flex-direction: column;
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+.signin div{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border: none;
+background-color: #034732;
+color: #C6C013;
+cursor: pointer;
+}
+.signin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: fit-content;
+    align-self: center;
+  box-shadow: 0 0 10px 2px#C6C013;
+  border-radius: 20px;
+  background-color: #EF8A17;
+  color: #EF2917;
+  
+}
+.signin p{
+  padding: 15px;
+  
+  font-size: x-large;
+
+}
+.signin-container{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+
+}
